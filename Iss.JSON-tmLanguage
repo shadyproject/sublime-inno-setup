@@ -1,0 +1,58 @@
+{ 
+    "name": "Inno Setup", 
+    "scopeName": "source.inno_setup",
+    "fileTypes": ["iss"],
+    "patterns":[ 
+    {
+      "captures": {"1": {"name": "punctuation.definition.comment.inno_setup"} },
+      "match": "^(;).*$\\n?", 
+      "name": "comment.line.semicolon.inno_setup"
+     },
+     {
+      "match": "^(\\w){1,}=",
+      "name": "keyword.inno_setup",
+      "comment": "Matches the Name= directives in [Setup]"
+      },
+     {
+        "name": "keyword.inno_setup",
+        "match": "(Name|MinVersion|OnlyBelowVersion|Languages|Source|DestDir|DestName|CopyMode|Attribs|Permissions|FontInstall|Flags|FileName|Parameters|WorkingDir|HotKey|Comment|IconFilename|IconIndex|Section|Key|String|Root|SubKey|ValueType|ValueName|ValueData|RunOnceId|Type|Components|Description|GroupDescription|Types|ExtraDiskSpaceRequired|StatusMsg|Tasks|MessagesFile|LicenseFile|InfoBeforeFile|InfoAfterFile)\\:",
+        "comment": "inno setup key words"
+     },
+     {
+      "name": "constant.character.inno_setup",
+      "match": "\\{\\w+\\}"
+      },
+     {
+      "name": "support.constant.inno_setup",
+      "match": "app|win|sys|syswow64|src|sd|pf|pf32|pf64|cf|cf32|cf64|tmp|fonts|dao|dotnet11|dotnet20|dotnet2032|dotnet2064|dotnet40|dotnet4032|dotnet4064|group|localappdata|sendto|userappdata|commonappdata|userdesktop|commondesktop|userfavorites|commonfavorites|userprograms|commonprograms|userstartmenu|commonstartmenu|userstartup|commonstartup|usertemplates|commontemplates|\\\\|cmd|computername|drive\\:(\\w)+|groupname|hwnd|wizardhwnd|ini\\:(\\w)+|cm\\:(\\w)+|language|reg\\:(\\w+)|param\\:(\\w)+|srcexe|uninstallexe|sysuserinfoname|sysuserinfoorg|userinfoname|userinfoorg|userinfoserial|username|log"
+      },
+      {
+        "name": "variable.other.inno_setup",
+        "match": "\\{#\\w{1,}\\}",
+        "comment": "user defined variable references"
+        },
+    {
+      "name": "preprocesser.include.inno_setup",
+      "begin": "^\\s*#\\s*(include|define)\\b",
+      "end": "$",
+      "comment": "Preprocessor directives"
+    },
+    
+    {
+      "name": "entity.name.section.inno_setup",
+      "match": "\\[\\w+\\]",
+      "comment": "section headers"
+    }
+    ],
+    "repository": {
+      "string_placeholder": {
+            "patterns": [
+                {
+                    "match": "(?x)%\n    \t\t\t\t\t\t(\\d+\\$)?                             # field (argument #)\n    \t\t\t\t\t\t[#0\\- +']*                           # flags\n    \t\t\t\t\t\t[,;:_]?                              # separator character (AltiVec)\n    \t\t\t\t\t\t((-?\\d+)|\\*(-?\\d+\\$)?)?              # minimum field width\n    \t\t\t\t\t\t(\\.((-?\\d+)|\\*(-?\\d+\\$)?)?)?         # precision\n    \t\t\t\t\t\t(hh|h|ll|l|j|t|z|q|L|vh|vl|v|hv|hl)? # length modifier\n    \t\t\t\t\t\t[diouxXDOUeEfFgGaACcSspn%]           # conversion type\n    \t\t\t\t\t", 
+                    "name": "constant.other.placeholder.inno_setup"
+                } 
+            ]
+        }
+    },
+  "uuid": "bb69316b-cdf2-468f-8435-69d445dd0d78"
+}

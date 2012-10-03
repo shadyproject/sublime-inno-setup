@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>fileTypes</key>
+	<array>
+		<string>iss</string>
+	</array>
+	<key>name</key>
+	<string>Inno Setup</string>
+	<key>patterns</key>
+	<array>
+		<dict>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>punctuation.definition.comment.inno_setup</string>
+				</dict>
+			</dict>
+			<key>match</key>
+			<string>^(;).*$\n?</string>
+			<key>name</key>
+			<string>comment.line.semicolon.inno_setup</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>Matches the Name= directives in [Setup]</string>
+			<key>match</key>
+			<string>^(\w){1,}=</string>
+			<key>name</key>
+			<string>keyword.inno_setup</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>inno setup key words</string>
+			<key>match</key>
+			<string>(Name|MinVersion|OnlyBelowVersion|Languages|Source|DestDir|DestName|CopyMode|Attribs|Permissions|FontInstall|Flags|FileName|Parameters|WorkingDir|HotKey|Comment|IconFilename|IconIndex|Section|Key|String|Root|SubKey|ValueType|ValueName|ValueData|RunOnceId|Type|Components|Description|GroupDescription|Types|ExtraDiskSpaceRequired|StatusMsg|Tasks|MessagesFile|LicenseFile|InfoBeforeFile|InfoAfterFile)\:</string>
+			<key>name</key>
+			<string>keyword.inno_setup</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>\{\w+\}</string>
+			<key>name</key>
+			<string>constant.character.inno_setup</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>app|win|sys|syswow64|src|sd|pf|pf32|pf64|cf|cf32|cf64|tmp|fonts|dao|dotnet11|dotnet20|dotnet2032|dotnet2064|dotnet40|dotnet4032|dotnet4064|group|localappdata|sendto|userappdata|commonappdata|userdesktop|commondesktop|userfavorites|commonfavorites|userprograms|commonprograms|userstartmenu|commonstartmenu|userstartup|commonstartup|usertemplates|commontemplates|\\|cmd|computername|drive\:(\w)+|groupname|hwnd|wizardhwnd|ini\:(\w)+|cm\:(\w)+|language|reg\:(\w+)|param\:(\w)+|srcexe|uninstallexe|sysuserinfoname|sysuserinfoorg|userinfoname|userinfoorg|userinfoserial|username|log</string>
+			<key>name</key>
+			<string>support.constant.inno_setup</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>user defined variable references</string>
+			<key>match</key>
+			<string>\{#\w{1,}\}</string>
+			<key>name</key>
+			<string>variable.other.inno_setup</string>
+		</dict>
+		<dict>
+			<key>begin</key>
+			<string>^\s*#\s*(include|define)\b</string>
+			<key>comment</key>
+			<string>Preprocessor directives</string>
+			<key>end</key>
+			<string>$</string>
+			<key>name</key>
+			<string>preprocesser.include.inno_setup</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>section headers</string>
+			<key>match</key>
+			<string>\[\w+\]</string>
+			<key>name</key>
+			<string>entity.name.section.inno_setup</string>
+		</dict>
+	</array>
+	<key>repository</key>
+	<dict>
+		<key>string_placeholder</key>
+		<dict>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>match</key>
+					<string>(?x)%
+    						(\d+\$)?                             # field (argument #)
+    						[#0\- +']*                           # flags
+    						[,;:_]?                              # separator character (AltiVec)
+    						((-?\d+)|\*(-?\d+\$)?)?              # minimum field width
+    						(\.((-?\d+)|\*(-?\d+\$)?)?)?         # precision
+    						(hh|h|ll|l|j|t|z|q|L|vh|vl|v|hv|hl)? # length modifier
+    						[diouxXDOUeEfFgGaACcSspn%]           # conversion type
+    					</string>
+					<key>name</key>
+					<string>constant.other.placeholder.inno_setup</string>
+				</dict>
+			</array>
+		</dict>
+	</dict>
+	<key>scopeName</key>
+	<string>source.inno_setup</string>
+	<key>uuid</key>
+	<string>bb69316b-cdf2-468f-8435-69d445dd0d78</string>
+</dict>
+</plist>
