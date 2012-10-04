@@ -10,38 +10,40 @@
      },
      {
       "match": "^(\\w){1,}=",
-      "name": "keyword.inno_setup",
+      "name": "keyword.control.inno_setup",
       "comment": "Matches the Name= directives in [Setup]"
       },
      {
-        "name": "keyword.inno_setup",
-        "match": "(Name|MinVersion|OnlyBelowVersion|Languages|Source|DestDir|DestName|CopyMode|Attribs|Permissions|FontInstall|Flags|FileName|Parameters|WorkingDir|HotKey|Comment|IconFilename|IconIndex|Section|Key|String|Root|SubKey|ValueType|ValueName|ValueData|RunOnceId|Type|Components|Description|GroupDescription|Types|ExtraDiskSpaceRequired|StatusMsg|Tasks|MessagesFile|LicenseFile|InfoBeforeFile|InfoAfterFile)\\:",
+        "name": "keyword.command.inno_setup",
+        "match": "(Name|MinVersion|OnlyBelowVersion|Languages|Source|DestDir|DestName|CopyMode|Attribs|Permissions|FontInstall|Flags|Filename|Parameters|WorkingDir|HotKey|Comment|IconFilename|IconIndex|Section|Key|String|Root|SubKey|ValueType|ValueName|ValueData|RunOnceId|Type|Components|Description|GroupDescription|Types|ExtraDiskSpaceRequired|StatusMsg|Tasks|MessagesFile|LicenseFile|InfoBeforeFile|InfoAfterFile)\\:",
         "comment": "inno setup key words"
      },
      {
-      "name": "constant.character.inno_setup",
-      "match": "\\{\\w+\\}"
-      },
-     {
       "name": "support.constant.inno_setup",
-      "match": "app|win|sys|syswow64|src|sd|pf|pf32|pf64|cf|cf32|cf64|tmp|fonts|dao|dotnet11|dotnet20|dotnet2032|dotnet2064|dotnet40|dotnet4032|dotnet4064|group|localappdata|sendto|userappdata|commonappdata|userdesktop|commondesktop|userfavorites|commonfavorites|userprograms|commonprograms|userstartmenu|commonstartmenu|userstartup|commonstartup|usertemplates|commontemplates|\\\\|cmd|computername|drive\\:(\\w)+|groupname|hwnd|wizardhwnd|ini\\:(\\w)+|cm\\:(\\w)+|language|reg\\:(\\w+)|param\\:(\\w)+|srcexe|uninstallexe|sysuserinfoname|sysuserinfoorg|userinfoname|userinfoorg|userinfoserial|username|log"
+      "match": "\\{(app|win|sys|syswow64|src|sd|pf|pf32|pf64|cf|cf32|cf64|tmp|fonts|dao|dotnet11|dotnet20|dotnet2032|dotnet2064|dotnet40|dotnet4032|dotnet4064|group|localappdata|sendto|userappdata|commonappdata|userdesktop|commondesktop|userfavorites|commonfavorites|userprograms|commonprograms|userstartmenu|commonstartmenu|userstartup|commonstartup|usertemplates|commontemplates|\\\\|cmd|computername|drive\\:(\\w)+|groupname|hwnd|wizardhwnd|ini\\:(\\w)+|cm\\:(\\w)+|language|reg\\:(\\w+)|param\\:(\\w)+|srcexe|uninstallexe|sysuserinfoname|sysuserinfoorg|userinfoname|userinfoorg|userinfoserial|username|log)\\}"
       },
-      {
-        "name": "variable.other.inno_setup",
-        "match": "\\{#\\w{1,}\\}",
-        "comment": "user defined variable references"
-        },
     {
-      "name": "preprocesser.include.inno_setup",
-      "begin": "^\\s*#\\s*(include|define)\\b",
-      "end": "$",
-      "comment": "Preprocessor directives"
-    },
-    
-    {
-      "name": "entity.name.section.inno_setup",
-      "match": "\\[\\w+\\]",
+      "name": "support.function.inno_setup",
+      "match": "\\[(Setup|Types|Components|Tasks|Dirs|Files|Icons|INI|InstallDelete|Languages|Messages|CustomMessages|LangOptions|Registry|Run|UninstallDelete|UninstallRun)\\]",
       "comment": "section headers"
+    },
+    {
+      "name": "invalid.illegal.inno_setup",
+      "match": "\\[^(Setup|Types|Components|Tasks|Dirs|Files|Icons|INI|InstallDelete|Languages|Messages|CustomMessages|LangOptions|Registry|Run|UninstallDelete|UninstallRun)\\]",
+      "comment": "any section that is not defined by inno setup"
+    },
+    {
+      "match": "\\{#\\w+\\}",
+      "name": "variable.language.inno_setup",
+      "comment": "user defined variables"
+    },
+    {
+      "match": "\\{\\{",
+      "name": "constant.character.escape.inno_setup"
+    },
+    {
+      "match": "(HKLM|HKCU|HKCR|HKU|HKCC)",
+      "name": "support.constant.inno_setup"
     }
     ],
     "repository": {

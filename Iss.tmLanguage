@@ -30,53 +30,57 @@
 			<key>match</key>
 			<string>^(\w){1,}=</string>
 			<key>name</key>
-			<string>keyword.inno_setup</string>
+			<string>keyword.control.inno_setup</string>
 		</dict>
 		<dict>
 			<key>comment</key>
 			<string>inno setup key words</string>
 			<key>match</key>
-			<string>(Name|MinVersion|OnlyBelowVersion|Languages|Source|DestDir|DestName|CopyMode|Attribs|Permissions|FontInstall|Flags|FileName|Parameters|WorkingDir|HotKey|Comment|IconFilename|IconIndex|Section|Key|String|Root|SubKey|ValueType|ValueName|ValueData|RunOnceId|Type|Components|Description|GroupDescription|Types|ExtraDiskSpaceRequired|StatusMsg|Tasks|MessagesFile|LicenseFile|InfoBeforeFile|InfoAfterFile)\:</string>
+			<string>(Name|MinVersion|OnlyBelowVersion|Languages|Source|DestDir|DestName|CopyMode|Attribs|Permissions|FontInstall|Flags|Filename|Parameters|WorkingDir|HotKey|Comment|IconFilename|IconIndex|Section|Key|String|Root|SubKey|ValueType|ValueName|ValueData|RunOnceId|Type|Components|Description|GroupDescription|Types|ExtraDiskSpaceRequired|StatusMsg|Tasks|MessagesFile|LicenseFile|InfoBeforeFile|InfoAfterFile)\:</string>
 			<key>name</key>
-			<string>keyword.inno_setup</string>
+			<string>keyword.command.inno_setup</string>
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>\{\w+\}</string>
-			<key>name</key>
-			<string>constant.character.inno_setup</string>
-		</dict>
-		<dict>
-			<key>match</key>
-			<string>app|win|sys|syswow64|src|sd|pf|pf32|pf64|cf|cf32|cf64|tmp|fonts|dao|dotnet11|dotnet20|dotnet2032|dotnet2064|dotnet40|dotnet4032|dotnet4064|group|localappdata|sendto|userappdata|commonappdata|userdesktop|commondesktop|userfavorites|commonfavorites|userprograms|commonprograms|userstartmenu|commonstartmenu|userstartup|commonstartup|usertemplates|commontemplates|\\|cmd|computername|drive\:(\w)+|groupname|hwnd|wizardhwnd|ini\:(\w)+|cm\:(\w)+|language|reg\:(\w+)|param\:(\w)+|srcexe|uninstallexe|sysuserinfoname|sysuserinfoorg|userinfoname|userinfoorg|userinfoserial|username|log</string>
+			<string>\{(app|win|sys|syswow64|src|sd|pf|pf32|pf64|cf|cf32|cf64|tmp|fonts|dao|dotnet11|dotnet20|dotnet2032|dotnet2064|dotnet40|dotnet4032|dotnet4064|group|localappdata|sendto|userappdata|commonappdata|userdesktop|commondesktop|userfavorites|commonfavorites|userprograms|commonprograms|userstartmenu|commonstartmenu|userstartup|commonstartup|usertemplates|commontemplates|\\|cmd|computername|drive\:(\w)+|groupname|hwnd|wizardhwnd|ini\:(\w)+|cm\:(\w)+|language|reg\:(\w+)|param\:(\w)+|srcexe|uninstallexe|sysuserinfoname|sysuserinfoorg|userinfoname|userinfoorg|userinfoserial|username|log)\}</string>
 			<key>name</key>
 			<string>support.constant.inno_setup</string>
 		</dict>
 		<dict>
 			<key>comment</key>
-			<string>user defined variable references</string>
-			<key>match</key>
-			<string>\{#\w{1,}\}</string>
-			<key>name</key>
-			<string>variable.other.inno_setup</string>
-		</dict>
-		<dict>
-			<key>begin</key>
-			<string>^\s*#\s*(include|define)\b</string>
-			<key>comment</key>
-			<string>Preprocessor directives</string>
-			<key>end</key>
-			<string>$</string>
-			<key>name</key>
-			<string>preprocesser.include.inno_setup</string>
-		</dict>
-		<dict>
-			<key>comment</key>
 			<string>section headers</string>
 			<key>match</key>
-			<string>\[\w+\]</string>
+			<string>\[(Setup|Types|Components|Tasks|Dirs|Files|Icons|INI|InstallDelete|Languages|Messages|CustomMessages|LangOptions|Registry|Run|UninstallDelete|UninstallRun)\]</string>
 			<key>name</key>
-			<string>entity.name.section.inno_setup</string>
+			<string>support.function.inno_setup</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>any section that is not defined by inno setup</string>
+			<key>match</key>
+			<string>\[^(Setup|Types|Components|Tasks|Dirs|Files|Icons|INI|InstallDelete|Languages|Messages|CustomMessages|LangOptions|Registry|Run|UninstallDelete|UninstallRun)\]</string>
+			<key>name</key>
+			<string>invalid.illegal.inno_setup</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>user defined variables</string>
+			<key>match</key>
+			<string>\{#\w+\}</string>
+			<key>name</key>
+			<string>variable.language.inno_setup</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>\{\{</string>
+			<key>name</key>
+			<string>constant.character.escape.inno_setup</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>(HKLM|HKCU|HKCR|HKU|HKCC)</string>
+			<key>name</key>
+			<string>support.constant.inno_setup</string>
 		</dict>
 	</array>
 	<key>repository</key>
