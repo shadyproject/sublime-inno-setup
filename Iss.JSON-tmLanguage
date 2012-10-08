@@ -24,7 +24,7 @@
       },
     {
       "name": "support.function.inno_setup",
-      "match": "\\[(Setup|Types|Components|Tasks|Dirs|Files|Icons|INI|InstallDelete|Languages|Messages|CustomMessages|LangOptions|Registry|Run|UninstallDelete|UninstallRun)\\]",
+      "match": "\\[(Setup|Types|Components|Tasks|Dirs|Files|Icons|INI|InstallDelete|Languages|Messages|CustomMessages|LangOptions|Registry|Run|UninstallDelete|UninstallRun|Code)\\]",
       "comment": "section headers"
     },
     {
