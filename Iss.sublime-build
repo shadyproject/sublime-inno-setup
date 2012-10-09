@@ -1,5 +1,5 @@
 {
-    "cmd": ["C:\\Program Files (x86)\\Inno Setup 5\\ISCC.exe", "$file"],
+    "cmd": ["ISCC.exe", "$file"],
     "selector": "source.inno_setup",
     "file_regex": "Error on line ([0-9]+) in ([A-Z]\\:\\\\.+\\.iss)\\: Column ([0-9])+\\:\n(.+)\\."
 }
