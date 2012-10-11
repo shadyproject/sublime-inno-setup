@@ -6,7 +6,7 @@ This plugin expects that ISCC will be in your %PATH% variable.
 
 #TODO
 In no particular order:
-* Add snippets for most sections
+* ~~Add snippets for most sections~~
 * Add syntax coloring for pascal scripting
 * Add folding support for sections
 * Improve existing syntax coloring to support user defined variables, strings, defines and includes.
