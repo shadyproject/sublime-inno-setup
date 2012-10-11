@@ -68,7 +68,7 @@
 			<key>match</key>
 			<string>\{#\w+\}</string>
 			<key>name</key>
-			<string>variable.language.inno_setup</string>
+			<string>entity.name.function.inno_setup</string>
 		</dict>
 		<dict>
 			<key>match</key>

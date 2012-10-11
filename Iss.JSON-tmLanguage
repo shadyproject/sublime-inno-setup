@@ -34,7 +34,7 @@
     },
     {
       "match": "\\{#\\w+\\}",
-      "name": "variable.language.inno_setup",
+      "name": "entity.name.function.inno_setup",
       "comment": "user defined variables"
     },
     {
