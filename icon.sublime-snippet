@@ -1,0 +1,8 @@
+<snippet>
+    <content><![CDATA[
+Name: "$1"; Filename: "$2"; IconFilename: "$3";
+]]></content>
+    <tabTrigger>icon</tabTrigger>
+    <scope>source.inno_setup</scope>
+    <description>Icon Directive</description>
+</snippet>

@@ -1,0 +1,17 @@
+<snippet>
+    <content><![CDATA[
+[Setup]
+AppName=$1
+AppVerName=$2
+AppPublisher=$3
+AppVersion=$4
+VersionInfoProductVersion=$5
+VersionInfoTextVersion=$6
+DefaultDirName=$7
+OutputBaseFilename=${8:$TM_FILENAME}
+OutputDir=$9
+]]></content>
+    <tabTrigger>setup</tabTrigger>
+    <scope>source.inno_setup</scope>
+    <description>Setup Section</description>
+</snippet>

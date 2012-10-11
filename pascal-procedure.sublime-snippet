@@ -1,0 +1,13 @@
+<snippet>
+    <content><![CDATA[
+procedure $1($2);
+var
+    $3: $4;
+begin
+    $5
+end;
+]]></content>
+    <tabTrigger>pproc</tabTrigger>
+    <scope>source.inno_setup</scope>
+    <description>Pascal Scripting Procedure</description>
+</snippet>

@@ -1,0 +1,8 @@
+<snippet>
+    <content><![CDATA[
+#define ${1:MyVariableName} "$2"
+]]></content>
+    <tabTrigger>def</tabTrigger>
+    <scope>source.inno_setup</scope>
+    <description>Define Variable Directive</description>
+</snippet>

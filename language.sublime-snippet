@@ -1,0 +1,8 @@
+<snippet>
+    <content><![CDATA[
+Name: "$1"; MessageFiles: "$2"; LicenseFile: "$3";
+]]></content>
+    <tabTrigger>lang</tabTrigger>
+    <scope>source.inno_setup</scope>
+    <description>Language Section File</description>
+</snippet>

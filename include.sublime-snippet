@@ -1,0 +1,8 @@
+<snippet>
+    <content><![CDATA[
+#include "$1"
+]]></content>
+    <tabTrigger>inc</tabTrigger>
+    <scope>source.inno_setup</scope>
+    <description>Include File Directive</description>
+</snippet>

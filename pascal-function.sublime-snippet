@@ -1,0 +1,13 @@
+<snippet>
+    <content><![CDATA[
+function $1(): ${2:AnsiString};
+var
+    ${3:Text}:${4:AnsiString};
+begin
+    $5
+end;
+]]></content>
+    <tabTrigger>pfunc</tabTrigger>
+    <scope>source.inno_setup</scope>
+    <description>Pascal Scripting Function</description>
+</snippet>

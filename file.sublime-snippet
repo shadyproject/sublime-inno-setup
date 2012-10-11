@@ -1,0 +1,8 @@
+<snippet>
+    <content><![CDATA[
+Source: $1; DestDir:$2; Flags:$3
+]]></content>
+    <tabTrigger>file</tabTrigger>
+    <scope>source.inno_setup</scope>
+    <description>File Directive</description>
+</snippet>

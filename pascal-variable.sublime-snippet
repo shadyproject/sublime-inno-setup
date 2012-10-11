@@ -1,0 +1,8 @@
+<snippet>
+    <content><![CDATA[
+$1:$2;
+]]></content>
+    <tabTrigger>pvar</tabTrigger>
+    <scope>source.inno_setup</scope>
+    <description>Pascal Scripting Variable</description>
+</snippet>
