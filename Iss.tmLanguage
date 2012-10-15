@@ -52,7 +52,7 @@
 			<key>match</key>
 			<string>\[(Setup|Types|Components|Tasks|Dirs|Files|Icons|INI|InstallDelete|Languages|Messages|CustomMessages|LangOptions|Registry|Run|UninstallDelete|UninstallRun|Code)\]</string>
 			<key>name</key>
-			<string>support.function.inno_setup</string>
+			<string>entity.name.function.inno_setup</string>
 		</dict>
 		<dict>
 			<key>comment</key>
@@ -68,7 +68,7 @@
 			<key>match</key>
 			<string>\{#\w+\}</string>
 			<key>name</key>
-			<string>entity.name.function.inno_setup</string>
+			<string>storage.type.function.inno_setup</string>
 		</dict>
 		<dict>
 			<key>match</key>

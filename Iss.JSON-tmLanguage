@@ -23,7 +23,7 @@
       "match": "\\{(app|win|sys|syswow64|src|sd|pf|pf32|pf64|cf|cf32|cf64|tmp|fonts|dao|dotnet11|dotnet20|dotnet2032|dotnet2064|dotnet40|dotnet4032|dotnet4064|group|localappdata|sendto|userappdata|commonappdata|userdesktop|commondesktop|userfavorites|commonfavorites|userprograms|commonprograms|userstartmenu|commonstartmenu|userstartup|commonstartup|usertemplates|commontemplates|\\\\|cmd|computername|drive\\:(\\w)+|groupname|hwnd|wizardhwnd|ini\\:(\\w)+|cm\\:(\\w)+|language|reg\\:(\\w+)|param\\:(\\w)+|srcexe|uninstallexe|sysuserinfoname|sysuserinfoorg|userinfoname|userinfoorg|userinfoserial|username|log)\\}"
       },
     {
-      "name": "support.function.inno_setup",
+      "name": "entity.name.function.inno_setup",
       "match": "\\[(Setup|Types|Components|Tasks|Dirs|Files|Icons|INI|InstallDelete|Languages|Messages|CustomMessages|LangOptions|Registry|Run|UninstallDelete|UninstallRun|Code)\\]",
       "comment": "section headers"
     },
@@ -34,7 +34,7 @@
     },
     {
       "match": "\\{#\\w+\\}",
-      "name": "entity.name.function.inno_setup",
+      "name": "storage.type.function.inno_setup",
       "comment": "user defined variables"
     },
     {
