@@ -1,5 +1,10 @@
 {
     "cmd": ["ISCC.exe", "$file"],
     "selector": "source.inno_setup",
-    "file_regex": "Error on line ([0-9]+) in ([A-Z]\\:\\\\.+\\.iss)\\: Column ([0-9])+\\:\n(.+)\\."
+    "file_regex": "Error on line ([0-9]+) in ([A-Z]\\:\\\\.+\\.iss)\\: Column ([0-9])+\\:\n(.+)\\.",
+
+    "windows":
+    {
+        "cmd": ["$packages/Inno Setup/iss_build.bat", "$file"]
+    }
 }
